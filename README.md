@@ -1,6 +1,8 @@
 # credit-card-fraud-detection
 
 ssh -i comp4651project.pem root@<DNS>
+  
+https:///<DNS>:8888/tree
 
 S3 link: https://s3.console.aws.amazon.com/s3/buckets/creditfrauddata/?region=us-east-1&tab=overview
 
