@@ -1,0 +1,421 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 12288 bytes for committing reserved memory.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_linux.cpp:2809), pid=2223, tid=2952936256
+#
+# JRE version: OpenJDK Runtime Environment (7.0_79-b14) (build 1.7.0_79-b14)
+# Java VM: OpenJDK Client VM (24.79-b02 mixed mode, sharing linux-x86 )
+# Derivative: IcedTea 2.5.5
+# Distribution: Ubuntu 14.04 LTS, package 7u79-2.5.5-0ubuntu0.14.04.2
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0xb0938800):  JavaThread "stdout writer for /usr/bin/python" daemon [_thread_new, id=2994, stack(0xaffd3000,0xb0024000)]
+
+Stack: [0xaffd3000,0xb0024000]
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0xb093ac00 JavaThread "Worker Monitor for /usr/bin/python" daemon [_thread_in_native, id=2995, stack(0xb076b000,0xb07bc000)]
+=>0xb0938800 JavaThread "stdout writer for /usr/bin/python" daemon [_thread_new, id=2994, stack(0xaffd3000,0xb0024000)]
+  0xb09a1400 JavaThread "Worker Monitor for /usr/bin/python" daemon [_thread_blocked, id=2993, stack(0xb0627000,0xb0678000)]
+  0xb0934000 JavaThread "Executor task launch worker-10" daemon [_thread_blocked, id=2794, stack(0xb0585000,0xb05d6000)]
+  0xb091c800 JavaThread "Executor task launch worker-9" daemon [_thread_in_native, id=2758, stack(0xb05d6000,0xb0627000)]
+  0xb09a5800 JavaThread "task-result-getter-3" daemon [_thread_blocked, id=2325, stack(0xb1e0d000,0xb1e5e000)]
+  0xb09a3000 JavaThread "task-result-getter-2" daemon [_thread_blocked, id=2322, stack(0xb07bc000,0xb080d000)]
+  0xb09db000 JavaThread "task-result-getter-1" daemon [_thread_blocked, id=2319, stack(0xb080d000,0xb085e000)]
+  0xb0906800 JavaThread "Thread-29" [_thread_in_native, id=2313, stack(0xb200d000,0xb205e000)]
+  0xb0926c00 JavaThread "task-result-getter-0" daemon [_thread_blocked, id=2312, stack(0xb0a5e000,0xb0aaf000)]
+  0xb3d80c00 JavaThread "stderr reader for /usr/bin/python" daemon [_thread_in_native, id=2308, stack(0xb0aaf000,0xb0b00000)]
+  0xb3d7f400 JavaThread "stdout reader for /usr/bin/python" daemon [_thread_in_native, id=2307, stack(0xb0c0d000,0xb0c5e000)]
+  0xb3d7b800 JavaThread "Idle Worker Monitor for /usr/bin/python" daemon [_thread_blocked, id=2305, stack(0xb0c5e000,0xb0caf000)]
+  0xb1374c00 JavaThread "SparkListenerBus" daemon [_thread_blocked, id=2301, stack(0xb120d000,0xb125e000)]
+  0xb1372c00 JavaThread "context-cleaner-periodic-gc" daemon [_thread_blocked, id=2300, stack(0xb125e000,0xb12af000)]
+  0xb1378400 JavaThread "Spark Context Cleaner" daemon [_thread_blocked, id=2299, stack(0xb12af000,0xb1300000)]
+  0xb189b000 JavaThread "shuffle-server-0" daemon [_thread_in_native, id=2298, stack(0xb1434000,0xb1485000)]
+  0xb1899400 JavaThread "driver-heartbeater" daemon [_thread_blocked, id=2297, stack(0xb1485000,0xb14d6000)]
+  0xb1896800 JavaThread "dag-scheduler-event-loop" daemon [_thread_blocked, id=2296, stack(0xb14d6000,0xb1527000)]
+  0xb3d19800 JavaThread "netty-rpc-env-timeout" daemon [_thread_blocked, id=2295, stack(0xb1527000,0xb1578000)]
+  0xb187e400 JavaThread "Timer-0" daemon [_thread_blocked, id=2294, stack(0xb1578000,0xb15c9000)]
+  0xb3d2ec00 JavaThread "heartbeat-receiver-event-loop-thread" daemon [_thread_blocked, id=2293, stack(0xb15c9000,0xb161a000)]
+  0xb185cc00 JavaThread "qtp31248153-55 Acceptor0 SelectChannelConnector@0.0.0.0:4041" daemon [_thread_in_native, id=2292, stack(0xb161a000,0xb166b000)]
+  0xb1856400 JavaThread "qtp31248153-54" daemon [_thread_blocked, id=2291, stack(0xb199f000,0xb19f0000)]
+  0xb1858000 JavaThread "qtp31248153-53" daemon [_thread_blocked, id=2290, stack(0xb194e000,0xb199f000)]
+  0xb185b000 JavaThread "qtp31248153-52" daemon [_thread_blocked, id=2289, stack(0xb17af000,0xb1800000)]
+  0xb185e400 JavaThread "qtp31248153-51" daemon [_thread_blocked, id=2288, stack(0xb175e000,0xb17af000)]
+  0xb1854c00 JavaThread "qtp31248153-50" daemon [_thread_blocked, id=2287, stack(0xb170d000,0xb175e000)]
+  0xb1859800 JavaThread "qtp31248153-49" daemon [_thread_blocked, id=2286, stack(0xb16bc000,0xb170d000)]
+  0xb1853c00 JavaThread "qtp31248153-48 Selector0" daemon [_thread_in_native, id=2285, stack(0xb166b000,0xb16bc000)]
+  0xb1fdd000 JavaThread "SPARK_CONTEXT cleanup timer" daemon [_thread_blocked, id=2276, stack(0xb19f0000,0xb1a41000)]
+  0xb1fbe800 JavaThread "BROADCAST_VARS cleanup timer" daemon [_thread_blocked, id=2275, stack(0xb1a41000,0xb1a92000)]
+  0xb1fbd800 JavaThread "BLOCK_MANAGER cleanup timer" daemon [_thread_blocked, id=2274, stack(0xb1a92000,0xb1ae3000)]
+  0xb1f9a800 JavaThread "MAP_OUTPUT_TRACKER cleanup timer" daemon [_thread_blocked, id=2273, stack(0xb1ae3000,0xb1b34000)]
+  0x08829c00 JavaThread "sparkDriverActorSystem-akka.remote.default-remote-dispatcher-15" daemon [_thread_blocked, id=2272, stack(0xb1b34000,0xb1b85000)]
+  0x087f4c00 JavaThread "New I/O server boss #6" daemon [_thread_in_native, id=2271, stack(0xb1b85000,0xb1bd6000)]
+  0x087a6800 JavaThread "New I/O worker #5" daemon [_thread_in_native, id=2270, stack(0xb1bd6000,0xb1c27000)]
+  0x087a8000 JavaThread "New I/O worker #4" daemon [_thread_in_native, id=2269, stack(0xb1c27000,0xb1c78000)]
+  0x087a3c00 JavaThread "New I/O boss #3" daemon [_thread_in_native, id=2268, stack(0xb1c78000,0xb1cc9000)]
+  0x08764800 JavaThread "New I/O worker #2" daemon [_thread_in_native, id=2267, stack(0xb1cc9000,0xb1d1a000)]
+  0x08759400 JavaThread "New I/O worker #1" daemon [_thread_in_native, id=2266, stack(0xb1d1a000,0xb1d6b000)]
+  0xb1f67c00 JavaThread "sparkDriverActorSystem-akka.remote.default-remote-dispatcher-7" daemon [_thread_blocked, id=2265, stack(0xb1d6b000,0xb1dbc000)]
+  0xb3d06000 JavaThread "sparkDriverActorSystem-akka.actor.default-dispatcher-4" daemon [_thread_blocked, id=2262, stack(0xb1e5e000,0xb1eaf000)]
+  0xb21e1800 JavaThread "sparkDriverActorSystem-scheduler-1" daemon [_thread_blocked, id=2259, stack(0xb205e000,0xb20af000)]
+  0xb218fc00 JavaThread "shuffle-server-0" daemon [_thread_in_native, id=2258, stack(0xb20af000,0xb2100000)]
+  0xb2127000 JavaThread "dispatcher-event-loop-0" daemon [_thread_blocked, id=2256, stack(0xb265e000,0xb26af000)]
+  0xb2549800 JavaThread "process reaper" daemon [_thread_in_native, id=2254, stack(0xb2811000,0xb282a000)]
+  0xb3d04000 JavaThread "Thread-2" [_thread_blocked, id=2252, stack(0xb26af000,0xb2700000)]
+  0xb2ce1400 JavaThread "Thread-1" [_thread_in_native, id=2251, stack(0xb287b000,0xb28cc000)]
+  0xb2cd9400 JavaThread "pool-1-thread-1" [_thread_blocked, id=2250, stack(0xb28cc000,0xb291d000)]
+  0xb684c000 JavaThread "Service Thread" daemon [_thread_blocked, id=2248, stack(0xb3b8c000,0xb3bdd000)]
+  0xb684a000 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=2247, stack(0xb3bdd000,0xb3c5e000)]
+  0xb6848800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=2246, stack(0xb3c5e000,0xb3caf000)]
+  0xb6833400 JavaThread "Finalizer" daemon [_thread_blocked, id=2245, stack(0xb3caf000,0xb3d00000)]
+  0xb6831c00 JavaThread "Reference Handler" daemon [_thread_blocked, id=2244, stack(0xb3e3a000,0xb3e8b000)]
+  0xb6807800 JavaThread "main" [_thread_in_native, id=2242, stack(0xb692b000,0xb697c000)]
+
+Other Threads:
+  0xb6830400 VMThread [stack: 0xb3e8b000,0xb3f0c000] [id=2243]
+  0xb684e400 WatcherThread [stack: 0xb3b0b000,0xb3b8c000] [id=2249]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 471872K, used 425288K [0x22800000, 0x42800000, 0x42800000)
+  eden space 419456K,  93% used [0x22800000, 0x3a6c27e8, 0x3c1a0000)
+  from space 52416K,  63% used [0x3c1a0000, 0x3e22fa98, 0x3f4d0000)
+  to   space 52416K,   0% used [0x3f4d0000, 0x3f4d0000, 0x42800000)
+ tenured generation   total 1048576K, used 836479K [0x42800000, 0x82800000, 0x82800000)
+   the space 1048576K,  79% used [0x42800000, 0x758dfe68, 0x758e0000, 0x82800000)
+ compacting perm gen  total 41472K, used 41463K [0x82800000, 0x85080000, 0x92800000)
+   the space 41472K,  99% used [0x82800000, 0x8507dcd0, 0x8507de00, 0x85080000)
+    ro space 10240K,  58% used [0x92800000, 0x92de1558, 0x92de1600, 0x93200000)
+    rw space 12288K,  59% used [0x93200000, 0x939164e8, 0x93916600, 0x93e00000)
+
+Card table byte_map: [0xb438f000,0xb471b000] byte_map_base: 0xb427b000
+
+Polling page: 0xb7723000
+
+Code Cache  [0xb479b000, 0xb4fbb000, 0xb679b000)
+ total_blobs=5942 nmethods=5705 adapters=172 free_code_cache=24455Kb largest_free_block=25037184
+
+Compilation events (10 events):
+Event: 930.905 Thread 0xb684a000 5760             org.apache.spark.sql.execution.columnar.BOOLEAN$::copyField (12 bytes)
+Event: 930.905 Thread 0xb684a000 nmethod 5760 0xb4fb9b08 code [0xb4fb9c20, 0xb4fb9cd4]
+Event: 932.297 Thread 0xb684a000 5761             scala.collection.AbstractIterator::toSeq (5 bytes)
+Event: 932.297 Thread 0xb684a000 nmethod 5761 0xb4fb9d88 code [0xb4fb9e90, 0xb4fb9f2c]
+Event: 983.572 Thread 0xb684a000 5762             org.apache.spark.sql.execution.columnar.InMemoryRelation$$anonfun$3$$anon$1$$anonfun$6::apply (9 bytes)
+Event: 983.572 Thread 0xb684a000 nmethod 5762 0xb4fb9f88 code [0xb4fba090, 0xb4fba14c]
+Event: 983.573 Thread 0xb684a000 5763             org.apache.spark.sql.execution.columnar.InMemoryRelation$$anonfun$3$$anon$1$$anonfun$6::apply (11 bytes)
+Event: 983.573 Thread 0xb684a000 nmethod 5763 0xb4fba208 code [0xb4fba310, 0xb4fba3ac]
+Event: 992.832 Thread 0xb684a000 5764             org.apache.spark.sql.execution.columnar.compression.IntDelta$::supports (30 bytes)
+Event: 992.837 Thread 0xb684a000 nmethod 5764 0xb4fba448 code [0xb4fba550, 0xb4fba61c]
+
+GC Heap History (10 events):
+Event: 984.765 GC heap before
+{Heap before GC invocations=314 (full 7):
+ def new generation   total 471872K, used 456388K [0x22800000, 0x42800000, 0x42800000)
+  eden space 419456K, 100% used [0x22800000, 0x3c1a0000, 0x3c1a0000)
+  from space 52416K,  70% used [0x3f4d0000, 0x418e1148, 0x42800000)
+  to   space 52416K,   0% used [0x3c1a0000, 0x3c1a0000, 0x3f4d0000)
+ tenured generation   total 1048576K, used 763805K [0x42800000, 0x82800000, 0x82800000)
+   the space 1048576K,  72% used [0x42800000, 0x711e7768, 0x711e7800, 0x82800000)
+ compacting perm gen  total 41472K, used 41463K [0x82800000, 0x85080000, 0x92800000)
+   the space 41472K,  99% used [0x82800000, 0x8507dcd0, 0x8507de00, 0x85080000)
+    ro space 10240K,  58% used [0x92800000, 0x92de1558, 0x92de1600, 0x93200000)
+    rw space 12288K,  59% used [0x93200000, 0x939164e8, 0x93916600, 0x93e00000)
+Event: 984.826 GC heap after
+Heap after GC invocations=315 (full 7):
+ def new generation   total 471872K, used 39953K [0x22800000, 0x42800000, 0x42800000)
+  eden space 419456K,   0% used [0x22800000, 0x22800000, 0x3c1a0000)
+  from space 52416K,  76% used [0x3c1a0000, 0x3e8a44e0, 0x3f4d0000)
+  to   space 52416K,   0% used [0x3f4d0000, 0x3f4d0000, 0x42800000)
+ tenured generation   total 1048576K, used 797293K [0x42800000, 0x82800000, 0x82800000)
+   the space 1048576K,  76% used [0x42800000, 0x7329b4a0, 0x7329b600, 0x82800000)
+ compacting perm gen  total 41472K, used 41463K [0x82800000, 0x85080000, 0x92800000)
+   the space 41472K,  99% used [0x82800000, 0x8507dcd0, 0x8507de00, 0x85080000)
+    ro space 10240K,  58% used [0x92800000, 0x92de1558, 0x92de1600, 0x93200000)
+    rw space 12288K,  59% used [0x93200000, 0x939164e8, 0x93916600, 0x93e00000)
+}
+Event: 986.249 GC heap before
+{Heap before GC invocations=315 (full 7):
+ def new generation   total 471872K, used 459409K [0x22800000, 0x42800000, 0x42800000)
+  eden space 419456K, 100% used [0x22800000, 0x3c1a0000, 0x3c1a0000)
+  from space 52416K,  76% used [0x3c1a0000, 0x3e8a44e0, 0x3f4d0000)
+  to   space 52416K,   0% used [0x3f4d0000, 0x3f4d0000, 0x42800000)
+ tenured generation   total 1048576K, used 797293K [0x42800000, 0x82800000, 0x82800000)
+   the space 1048576K,  76% used [0x42800000, 0x7329b4a0, 0x7329b600, 0x82800000)
+ compacting perm gen  total 41472K, used 41463K [0x82800000, 0x85080000, 0x92800000)
+   the space 41472K,  99% used [0x82800000, 0x8507dcd0, 0x8507de00, 0x85080000)
+    ro space 10240K,  58% used [0x92800000, 0x92de1558, 0x92de1600, 0x93200000)
+    rw space 12288K,  59% used [0x93200000, 0x939164e8, 0x93916600, 0x93e00000)
+Event: 986.366 GC heap after
+Heap after GC invocations=316 (full 7):
+ def new generation   total 471872K, used 1661K [0x22800000, 0x42800000, 0x42800000)
+  eden space 419456K,   0% used [0x22800000, 0x22800000, 0x3c1a0000)
+  from space 52416K,   3% used [0x3f4d0000, 0x3f66f5e8, 0x42800000)
+  to   space 52416K,   0% used [0x3c1a0000, 0x3c1a0000, 0x3f4d0000)
+ tenured generation   total 1048576K, used 836479K [0x42800000, 0x82800000, 0x82800000)
+   the space 1048576K,  79% used [0x42800000, 0x758dfe68, 0x758e0000, 0x82800000)
+ compacting perm gen  total 41472K, used 41463K [0x82800000, 0x85080000, 0x92800000)
+   the space 41472K,  99% used [0x82800000, 0x8507dcd0, 0x8507de00, 0x85080000)
+    ro space 10240K,  58% used [0x92800000, 0x92de1558, 0x92de1600, 0x93200000)
+    rw space 12288K,  59% used [0x93200000, 0x939164e8, 0x93916600, 0x93e00000)
+}
+Event: 988.156 GC heap before
+{Heap before GC invocations=316 (full 7):
+ def new generation   total 471872K, used 421117K [0x22800000, 0x42800000, 0x42800000)
+  eden space 419456K, 100% used [0x22800000, 0x3c1a0000, 0x3c1a0000)
+  from space 52416K,   3% used [0x3f4d0000, 0x3f66f5e8, 0x42800000)
+  to   space 52416K,   0% used [0x3c1a0000, 0x3c1a0000, 0x3f4d0000)
+ tenured generation   total 1048576K, used 836479K [0x42800000, 0x82800000, 0x82800000)
+   the space 1048576K,  79% used [0x42800000, 0x758dfe68, 0x758e0000, 0x82800000)
+ compacting perm gen  total 41472K, used 41463K [0x82800000, 0x85080000, 0x92800000)
+   the space 41472K,  99% used [0x82800000, 0x8507dcd0, 0x8507de00, 0x85080000)
+    ro space 10240K,  58% used [0x92800000, 0x92de1558, 0x92de1600, 0x93200000)
+    rw space 12288K,  59% used [0x93200000, 0x939164e8, 0x93916600, 0x93e00000)
+Event: 988.165 GC heap after
+Heap after GC invocations=317 (full 7):
+ def new generation   total 471872K, used 2596K [0x22800000, 0x42800000, 0x42800000)
+  eden space 419456K,   0% used [0x22800000, 0x22800000, 0x3c1a0000)
+  from space 52416K,   4% used [0x3c1a0000, 0x3c429168, 0x3f4d0000)
+  to   space 52416K,   0% used [0x3f4d0000, 0x3f4d0000, 0x42800000)
+ tenured generation   total 1048576K, used 836479K [0x42800000, 0x82800000, 0x82800000)
+   the space 1048576K,  79% used [0x42800000, 0x758dfe68, 0x758e0000, 0x82800000)
+ compacting perm gen  total 41472K, used 41463K [0x82800000, 0x85080000, 0x92800000)
+   the space 41472K,  99% used [0x82800000, 0x8507dcd0, 0x8507de00, 0x85080000)
+    ro space 10240K,  58% used [0x92800000, 0x92de1558, 0x92de1600, 0x93200000)
+    rw space 12288K,  59% used [0x93200000, 0x939164e8, 0x93916600, 0x93e00000)
+}
+Event: 989.782 GC heap before
+{Heap before GC invocations=317 (full 7):
+ def new generation   total 471872K, used 422052K [0x22800000, 0x42800000, 0x42800000)
+  eden space 419456K, 100% used [0x22800000, 0x3c1a0000, 0x3c1a0000)
+  from space 52416K,   4% used [0x3c1a0000, 0x3c429168, 0x3f4d0000)
+  to   space 52416K,   0% used [0x3f4d0000, 0x3f4d0000, 0x42800000)
+ tenured generation   total 1048576K, used 836479K [0x42800000, 0x82800000, 0x82800000)
+   the space 1048576K,  79% used [0x42800000, 0x758dfe68, 0x758e0000, 0x82800000)
+ compacting perm gen  total 41472K, used 41463K [0x82800000, 0x85080000, 0x92800000)
+   the space 41472K,  99% used [0x82800000, 0x8507dcd0, 0x8507de00, 0x85080000)
+    ro space 10240K,  58% used [0x92800000, 0x92de1558, 0x92de1600, 0x93200000)
+    rw space 12288K,  59% used [0x93200000, 0x939164e8, 0x93916600, 0x93e00000)
+Event: 989.786 GC heap after
+Heap after GC invocations=318 (full 7):
+ def new generation   total 471872K, used 884K [0x22800000, 0x42800000, 0x42800000)
+  eden space 419456K,   0% used [0x22800000, 0x22800000, 0x3c1a0000)
+  from space 52416K,   1% used [0x3f4d0000, 0x3f5ad0e0, 0x42800000)
+  to   space 52416K,   0% used [0x3c1a0000, 0x3c1a0000, 0x3f4d0000)
+ tenured generation   total 1048576K, used 836479K [0x42800000, 0x82800000, 0x82800000)
+   the space 1048576K,  79% used [0x42800000, 0x758dfe68, 0x758e0000, 0x82800000)
+ compacting perm gen  total 41472K, used 41463K [0x82800000, 0x85080000, 0x92800000)
+   the space 41472K,  99% used [0x82800000, 0x8507dcd0, 0x8507de00, 0x85080000)
+    ro space 10240K,  58% used [0x92800000, 0x92de1558, 0x92de1600, 0x93200000)
+    rw space 12288K,  59% used [0x93200000, 0x939164e8, 0x93916600, 0x93e00000)
+}
+Event: 991.570 GC heap before
+{Heap before GC invocations=318 (full 7):
+ def new generation   total 471872K, used 420340K [0x22800000, 0x42800000, 0x42800000)
+  eden space 419456K, 100% used [0x22800000, 0x3c1a0000, 0x3c1a0000)
+  from space 52416K,   1% used [0x3f4d0000, 0x3f5ad0e0, 0x42800000)
+  to   space 52416K,   0% used [0x3c1a0000, 0x3c1a0000, 0x3f4d0000)
+ tenured generation   total 1048576K, used 836479K [0x42800000, 0x82800000, 0x82800000)
+   the space 1048576K,  79% used [0x42800000, 0x758dfe68, 0x758e0000, 0x82800000)
+ compacting perm gen  total 41472K, used 41463K [0x82800000, 0x85080000, 0x92800000)
+   the space 41472K,  99% used [0x82800000, 0x8507dcd0, 0x8507de00, 0x85080000)
+    ro space 10240K,  58% used [0x92800000, 0x92de1558, 0x92de1600, 0x93200000)
+    rw space 12288K,  59% used [0x93200000, 0x939164e8, 0x93916600, 0x93e00000)
+Event: 991.578 GC heap after
+Heap after GC invocations=319 (full 7):
+ def new generation   total 471872K, used 33342K [0x22800000, 0x42800000, 0x42800000)
+  eden space 419456K,   0% used [0x22800000, 0x22800000, 0x3c1a0000)
+  from space 52416K,  63% used [0x3c1a0000, 0x3e22fa98, 0x3f4d0000)
+  to   space 52416K,   0% used [0x3f4d0000, 0x3f4d0000, 0x42800000)
+ tenured generation   total 1048576K, used 836479K [0x42800000, 0x82800000, 0x82800000)
+   the space 1048576K,  79% used [0x42800000, 0x758dfe68, 0x758e0000, 0x82800000)
+ compacting perm gen  total 41472K, used 41463K [0x82800000, 0x85080000, 0x92800000)
+   the space 41472K,  99% used [0x82800000, 0x8507dcd0, 0x8507de00, 0x85080000)
+    ro space 10240K,  58% used [0x92800000, 0x92de1558, 0x92de1600, 0x93200000)
+    rw space 12288K,  59% used [0x93200000, 0x939164e8, 0x93916600, 0x93e00000)
+}
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 905.973 Thread 0xb0934000 Threw 0x270b7ad8 at /build/buildd/openjdk-7-7u79-2.5.5/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1284
+Event: 905.973 Thread 0xb0934000 Threw 0x270b9358 at /build/buildd/openjdk-7-7u79-2.5.5/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1284
+Event: 905.973 Thread 0xb0934000 Threw 0x270b98c0 at /build/buildd/openjdk-7-7u79-2.5.5/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1284
+Event: 905.973 Thread 0xb0934000 Threw 0x270b9e28 at /build/buildd/openjdk-7-7u79-2.5.5/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1284
+Event: 905.974 Thread 0xb0934000 Threw 0x270bc4e0 at /build/buildd/openjdk-7-7u79-2.5.5/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1284
+Event: 905.974 Thread 0xb0934000 Threw 0x270be1f8 at /build/buildd/openjdk-7-7u79-2.5.5/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1284
+Event: 905.974 Thread 0xb0934000 Threw 0x270be7c8 at /build/buildd/openjdk-7-7u79-2.5.5/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1284
+Event: 905.974 Thread 0xb0934000 Threw 0x270bed98 at /build/buildd/openjdk-7-7u79-2.5.5/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1284
+Event: 905.979 Thread 0xb3d04000 Threw 0x2764ec90 at /build/buildd/openjdk-7-7u79-2.5.5/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1284
+Event: 905.979 Thread 0xb3d04000 Threw 0x276532a8 at /build/buildd/openjdk-7-7u79-2.5.5/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1284
+
+Events (10 events):
+Event: 989.699 Executing VM operation: BulkRevokeBias
+Event: 989.703 Executing VM operation: BulkRevokeBias done
+Event: 989.705 Thread 0xb093ac00 Thread exited: 0xb093ac00
+Event: 989.782 Executing VM operation: GenCollectForAllocation
+Event: 989.786 Executing VM operation: GenCollectForAllocation done
+Event: 990.403 Executing VM operation: RevokeBias
+Event: 990.403 Executing VM operation: RevokeBias done
+Event: 991.568 Executing VM operation: GenCollectForAllocation
+Event: 991.586 Executing VM operation: GenCollectForAllocation done
+Event: 993.169 Thread 0xb0938800 Thread added: 0xb0938800
+
+
+Dynamic libraries:
+08048000-08049000 r-xp 00000000 08:01 262156     /usr/lib/jvm/java-7-openjdk-i386/jre/bin/java
+08049000-0804a000 r--p 00000000 08:01 262156     /usr/lib/jvm/java-7-openjdk-i386/jre/bin/java
+0804a000-0804b000 rw-p 00001000 08:01 262156     /usr/lib/jvm/java-7-openjdk-i386/jre/bin/java
+08556000-08a82000 rw-p 00000000 00:00 0          [heap]
+22800000-85080000 rw-p 00000000 00:00 0 
+85080000-92800000 rw-p 00000000 00:00 0 
+92800000-92de2000 r--p 00001000 08:01 262344     /usr/lib/jvm/java-7-openjdk-i386/jre/lib/i386/client/classes.jsa
+92de2000-93200000 rw-p 00000000 00:00 0 
+93200000-93917000 rw-p 005e3000 08:01 262344     /usr/lib/jvm/java-7-openjdk-i386/jre/lib/i386/client/classes.jsa
+93917000-93e00000 rw-p 00000000 00:00 0 
+93e00000-94112000 rw-p 00cfa000 08:01 262344     /usr/lib/jvm/java-7-openjdk-i386/jre/lib/i386/client/classes.jsa
+94112000-94200000 rw-p 00000000 00:00 0 
+94200000-94209000 r-xp 0100c000 08:01 262344     /usr/lib/jvm/java-7-openjdk-i386/jre/lib/i386/client/classes.jsa
+94209000-94600000 rw-p 00000000 00:00 0 
+af800000-af82d000 rw-p 00000000 00:00 0 
+af82d000-af900000 ---p 00000000 00:00 0 
+af97f000-af982000 ---p 00000000 00:00 0 
+af982000-af9d0000 rw-p 00000000 00:00 0 
+af9d0000-af9d3000 ---p 00000000 00:00 0 
+af9d3000-afa21000 rw-p 00000000 00:00 0 
+afa21000-afa24000 ---p 00000000 00:00 0 
+afa24000-afa72000 rw-p 00000000 00:00 0 
+afa72000-afa75000 ---p 00000000 00:00 0 
+afa75000-afac3000 rw-p 00000000 00:00 0 
+afac3000-afac6000 ---p 00000000 00:00 0 
+afac6000-afb14000 rw-p 00000000 00:00 0 
+afb14000-afb17000 ---p 00000000 00:00 0 
+afb17000-afb65000 rw-p 00000000 00:00 0 
+afb65000-afb68000 ---p 00000000 00:00 0 
+afb68000-afbb6000 rw-p 00000000 00:00 0 
+afbb6000-afbb9000 ---p 00000000 00:00 0 
+afbb9000-afc07000 rw-p 00000000 00:00 0 
+afc07000-afc0a000 ---p 00000000 00:00 0 
+afc0a000-afc58000 rw-p 00000000 00:00 0 
+afc58000-afc5b000 ---p 00000000 00:00 0 
+afc5b000-afca9000 rw-p 00000000 00:00 0 
+afca9000-afcac000 ---p 00000000 00:00 0 
+afcac000-afcfa000 rw-p 00000000 00:00 0 
+afcfa000-afcfd000 ---p 00000000 00:00 0 
+afcfd000-afd4b000 rw-p 00000000 00:00 0 
+afd4b000-afd4e000 ---p 00000000 00:00 0 
+afd4e000-afd9c000 rw-p 00000000 00:00 0 
+afd9c000-afd9f000 ---p 00000000 00:00 0 
+afd9f000-afded000 rw-p 00000000 00:00 0 
+afded000-afdf0000 ---p 00000000 00:00 0 
+afdf0000-afe3e000 rw-p 00000000 00:00 0 
+afe3e000-afe41000 ---p 00000000 00:00 0 
+afe41000-afe8f000 rw-p 00000000 00:00 0 
+afe8f000-afe92000 ---p 00000000 00:00 0 
+afe92000-afee0000 rw-p 00000000 00:00 0 
+afee0000-afee3000 ---p 00000000 00:00 0 
+afee3000-aff31000 rw-p 00000000 00:00 0 
+aff31000-aff34000 ---p 00000000 00:00 0 
+aff34000-aff82000 rw-p 00000000 00:00 0 
+aff82000-aff85000 ---p 00000000 00:00 0 
+aff85000-affd3000 rw-p 00000000 00:00 0 
+affd6000-b0024000 rw-p 00000000 00:00 0          [stack:2994]
+b0024000-b0027000 ---p 00000000 00:00 0 
+b0027000-b0075000 rw-p 00000000 00:00 0 
+b0075000-b0078000 ---p 00000000 00:00 0 
+b0078000-b00c6000 rw-p 00000000 00:00 0 
+b00c6000-b00c9000 ---p 00000000 00:00 0 
+b00c9000-b0117000 rw-p 00000000 00:00 0 
+b0117000-b011a000 ---p 00000000 00:00 0 
+b011a000-b0168000 rw-p 00000000 00:00 0 
+b0168000-b016b000 ---p 00000000 00:00 0 
+b016b000-b01b9000 rw-p 00000000 00:00 0 
+b01b9000-b01bc000 ---p 00000000 00:00 0 
+b01bc000-b020a000 rw-p 00000000 00:00 0 
+b020a000-b020d000 ---p 00000000 00:00 0 
+b020d000-b025b000 rw-p 00000000 00:00 0 
+b025b000-b025e000 ---p 00000000 00:00 0 
+b025e000-b02ac000 rw-p 00000000 00:00 0 
+b02ac000-b02af000 ---p 00000000 00:00 0 
+b02af000-b02fd000 rw-p 00000000 00:00 0 
+b02fd000-b0300000 ---p 00000000 00:00 0 
+b0300000-b034e000 rw-p 00000000 00:00 0 
+b034e000-b0351000 ---p 00000000 00:00 0 
+b0351000-b039f000 rw-p 00000000 00:00 0 
+b039f000-b03a2000 ---p 00000000 00:00 0 
+b03a2000-b03f0000 rw-p 00000000 00:00 0 
+b03f0000-b03f3000 ---p 00000000 00:00 0 
+b03f3000-b0441000 rw-p 00000000 00:00 0 
+b0441000-b0444000 ---p 00000000 00:00 0 
+b0444000-b0492000 rw-p 00000000 00:00 0 
+b0492000-b0495000 ---p 00000000 00:00 0 
+b0495000-b04e3000 rw-p 00000000 00:00 0 
+b04e3000-b04e6000 ---p 00000000 00:00 0 
+b04e6000-b0534000 rw-p 00000000 00:00 0 
+b0534000-b0537000 ---p 00000000 00:00 0 
+b0537000-b0585000 rw-p 00000000 00:00 0 
+b0585000-b0588000 ---p 00000000 00:00 0 
+b0588000-b05d6000 rw-p 00000000 00:00 0          [stack:2794]
+b05d6000-b05d9000 ---p 00000000 00:00 0 
+b05d9000-b0627000 rw-p 00000000 00:00 0          [stack:2758]
+b0627000-b062a000 ---p 00000000 00:00 0 
+b062a000-b0678000 rw-p 00000000 00:00 0          [stack:2993]
+b0678000-b067b000 ---p 00000000 00:00 0 
+b067b000-b06c9000 rw-p 00000000 00:00 0 
+b06c9000-b06cc000 ---p 00000000 00:00 0 
+b06cc000-b071a000 rw-p 00000000 00:00 0 
+b071a000-b071d000 ---p 00000000 00:00 0 
+b071d000-b076b000 rw-p 00000000 00:00 0 
+b076e000-b07bc000 rw-p 00000000 00:00 0          [stack:2995]
+b07bc000-b07bf000 ---p 00000000 00:00 0 
+b07bf000-b080d000 rw-p 00000000 00:00 0          [stack:2322]
+b080d000-b0810000 ---p 00000000 00:00 0 
+b0810000-b085e000 rw-p 00000000 00:00 0          [stack:2319]
+b085e000-b0861000 ---p 00000000 00:00 0 
+b0861000-b08af000 rw-p 00000000 00:00 0 
+b08af000-b08b2000 ---p 00000000 00:00 0 
+b08b2000-b0900000 rw-p 00000000 00:00 0 
+b0900000-b0a00000 rw-p 00000000 00:00 0 
+b0a0d000-b0a10000 ---p 00000000 00:00 0 
+b0a10000-b0a5e000 rw-p 00000000 00:00 0 
+b0a5e000-b0a61000 ---p 00000000 00:00 0 
+b0a61000-b0aaf000 rw-p 00000000 00:00 0          [stack:2312]
+b0aaf000-b0ab2000 ---p 00000000 00:00 0 
+b0ab2000-b0b00000 rw-p 00000000 00:00 0          [stack:2308]
+b0b00000-b0bfb000 rw-p 00000000 00:00 0 
+b0bfb000-b0c00000 ---p 00000000 00:00 0 
+b0c0d000-b0c10000 ---p 00000000 00:00 0 
+b0c10000-b0c5e000 rw-p 00000000 00:00 0          [stack:2307]
+b0c5e000-b0c61000 ---p 00000000 00:00 0 
+b0c61000-b0caf000 rw-p 00000000 00:00 0          [stack:2305]
+b0caf000-b0cb2000 ---p 00000000 00:00 0 
+b0cb2000-b0d00000 rw-p 00000000 00:00 0 
+b0d00000-b0f00000 rw-p 00000000 00:00 0 
+b0f00000-b0fff000 rw-p 00000000 00:00 0 
+b0fff000-b1000000 ---p 00000000 00:00 0 
+b1000000-b1100000 rw-p 00000000 00:00 0 
+b1100000-b11fe000 rw-p 00000000 00:00 0 
+b11fe000-b1200000 ---p 00000000 00:00 0 
+b120d000-b1210000 ---p 
